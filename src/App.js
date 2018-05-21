@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home.js';
+import Portfolio from './components/Portfolio.js';
+import About from './components/About.js';
+import Contact from './components/Contact.js';
+import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppHolder>
+        <Router>
+          <div>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about_me" component={About}/>
+            <Route path="/portfolio" component={Portfolio}/>
+            <Route path="/contact" component={Contact}/>
+          </div>
+        </Router>
+      </AppHolder>
     );
   }
 }
 
 export default App;
+
+const AppHolder = styled.div `
+  text-align: center;
+  background-color: #1e0707;
+  height: 100%;
+`
