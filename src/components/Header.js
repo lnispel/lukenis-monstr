@@ -31,12 +31,13 @@ const HeaderLink = styled(Link)`
     color: white;
     border-bottom: 2px solid #1e0707;
     width: fit-content;
-    color: #1e0707;
+    color: black;
     white-space: nowrap;
-    margin: 3px 10px;
+    margin: 10px 10px 3px 10px;
     font-family: futura;
     height: 0;
-    transition: border .2s ease-in-out, color .2s ease-in-out, width .2s ease-in-out;
+
+    transition: height .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out, width .2s ease-in-out;
 `
 
 const HeaderContainer = styled.div`
@@ -44,13 +45,16 @@ const HeaderContainer = styled.div`
     padding-top: 10px;
     height: 30px;
     display: flex;
+
     &:hover .circle-hover {
       margin-top: 16px;
     }
+
     &:hover .top-circle-hover {
       margin-top: 6px;
       background-color: white;
     }
+
     &:hover .header-link {
       color: white
       border-bottom: 2px solid #63ecf7;

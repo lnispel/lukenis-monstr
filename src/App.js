@@ -28,6 +28,6 @@ export default App;
 
 const AppHolder = styled.div `
   text-align: center;
-  background-color: #1e0707;
+  background-color: #1E0765;
   height: 100%;
 `
