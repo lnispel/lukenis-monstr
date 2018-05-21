@@ -39,7 +39,7 @@ const Hr_1 = styled.hr`
     margin-top: 425px;
   }
   @media ${device.mobileL} {
-    margin-top: 300px;
+    margin-top: 200px;
   }
 `
 const Hr_2 = styled.hr`
