@@ -28,13 +28,11 @@ export default Header;
 
 const HeaderLink = styled(Link)`
     text-decoration: none;
-    color: white;
     border-bottom: 2px solid #1e0707;
     width: fit-content;
-    color: black;
+    color: white;
     white-space: nowrap;
     margin: 10px 10px 3px 10px;
-    font-family: futura;
     height: 0;
 
     transition: height .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out, width .2s ease-in-out;
@@ -51,19 +49,19 @@ const HeaderContainer = styled.div`
     }
 
     &:hover .top-circle-hover {
-      margin-top: 6px;
+      margin-top: 7px;
       background-color: white;
     }
 
     &:hover .header-link {
-      color: white
+      color: black
       border-bottom: 2px solid #63ecf7;
       height: 20px;
     }
 `
 
 const TopCircle = styled.div`
-    background-color: transparent;
+    background-color: #3a1111;
     border-radius: 25px;
     border: 2px solid #63ecf7;
     width: 15px;
@@ -74,11 +72,11 @@ const TopCircle = styled.div`
 `
 
 const Circle = styled.div`
-    background-color: white;
+    background-color: #3a1111;
     border-radius: 25px;
     width: 17px;
     height: 17px;
     margin: 8px;
-    margin-right: -26px;
+    margin-right: -26.3px;
     transition: margin .2s ease-in-out;
 `

@@ -6,9 +6,10 @@ import About from './components/About.js';
 import Contact from './components/Contact.js';
 import PageShell from './components/PageShell'
 import styled from 'styled-components';
-import Drilldown from 'react-router-drilldown'
-import { Router, Route} from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
+import Drilldown from 'react-router-drilldown';
+import { Router, Route} from 'react-router-dom';
+import Header from './components/Header.js';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory()
 
@@ -35,6 +36,6 @@ export default App;
 
 const AppHolder = styled.div `
   text-align: center;
-  background-color: #1E0765;
+  background: #efefef;
   height: 100%;
 `

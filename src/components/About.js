@@ -7,7 +7,7 @@ class About extends Component {
     return (
       <div>
         <AboutMe>
-          My name is Luke Nispel and I am a creator. I have a background in both software development as well as art and graphic design. I was raised by an elctrical engineer as my father and a graphic desginer as my mother.
+          <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an elctrical engineer as my father and a graphic desginer as my mother.
         </AboutMe>
         <AboutImage src={AboutMeImage}/>
       </div>
@@ -17,10 +17,17 @@ class About extends Component {
 
 export default About;
 
+const AboutTitle = styled.h3`
+  margin-left: -35%;
+  margin-top: -10%;
+`
+
 const AboutMe = styled.div`
-    color: white;
+    color: #1e0707;
     width: 80%;
     padding: 10%;
+    position: relative;
+    z-index: 10
 `
 
 const AboutImage = styled.img`
@@ -29,4 +36,5 @@ const AboutImage = styled.img`
   z-index: 10;
   margin-top: -110px;
   position: relative;
+  margin-right: -25%;
 `

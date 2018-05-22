@@ -7,10 +7,10 @@ const PageShell = Page => {
   return props =>
     <div className="page">
         <Header/>
-        <Hr1/>
-        <Hr2 />
+        <Hr1 className="divider"/>
+        <Hr2 className="divider"/>
         <Page {...props} />
-        <Hr3 />
+        <Hr3 className="divider" />
     </div>;
 };
 
@@ -22,6 +22,7 @@ const Hr1 = styled.hr`
   position: relative;
   z-index: 1;
   margin-top: 300px;
+  
   @media ${device.tablet} {
     margin-top: 425px;
   }
