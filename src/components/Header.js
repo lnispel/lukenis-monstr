@@ -8,23 +8,41 @@ class Header extends Component {
         <HeaderContainer>
           <Circle className="circle-hover"/>
           <TopCircle className="top-circle-hover"/>
-          <HeaderLink className="header-link" to="/">
-            Home
-          </HeaderLink>
-          <HeaderLink className="header-link" to="/about_me">
-            About Me
-          </HeaderLink>
-          <HeaderLink className="header-link" to="/portfolio">
-            Portfolio
-          </HeaderLink>
-          <HeaderLink className="header-link" to="/contact">
-            Contact
-          </HeaderLink>
+          <MainNav>
+            <li>
+              <HeaderLink className="header-link" to="/">
+                Home
+              </HeaderLink>
+            </li>
+            <li>
+              <HeaderLink className="header-link" to="/about_me">
+                About Me
+              </HeaderLink>
+            </li>
+            <li>
+              <HeaderLink className="header-link" to="/portfolio">
+                Portfolio
+              </HeaderLink>
+            </li>
+            <li>
+              <HeaderLink className="header-link" to="/contact">
+                Contact
+              </HeaderLink>
+            </li>
+          </MainNav>
         </HeaderContainer>
     )
   }
 }
 export default Header;
+
+const MainNav = styled.ul`
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    padding-left: 0;
+    padding-top: 8px;
+`
 
 const HeaderLink = styled(Link)`
     text-decoration: none;
@@ -38,11 +56,15 @@ const HeaderLink = styled(Link)`
     transition: height .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out, width .2s ease-in-out;
 `
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.ul`
+    list-style-type: none;
+    text-decoration: none;
+    display: flex
     padding-left: 10px;
     padding-top: 10px;
     height: 30px;
     display: flex;
+    margin: 0;
 
     &:hover .circle-hover {
       margin-top: 16px;

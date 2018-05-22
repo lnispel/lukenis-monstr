@@ -7,9 +7,24 @@ class About extends Component {
     return (
       <div>
         <AboutMe>
-          <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an elctrical engineer as my father and a graphic desginer as my mother.
+          <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an electrical engineer as my father and a graphic desginer as my mother.
         </AboutMe>
         <AboutImage src={AboutMeImage}/>
+
+          <AboutMe>
+            <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an electrical engineer as my father and a graphic desginer as my mother.
+          </AboutMe>
+          <AboutImage src={AboutMeImage}/>
+
+            <AboutMe>
+              <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an electrical engineer as my father and a graphic desginer as my mother.
+            </AboutMe>
+            <AboutImage src={AboutMeImage}/>
+
+              <AboutMe>
+                <AboutTitle>My name is Luke Nispel and I am a creator. </AboutTitle>I have a background in both software development as well as art and graphic design. I was raised by an electrical engineer as my father and a graphic desginer as my mother.
+              </AboutMe>
+              <AboutImage src={AboutMeImage}/>
       </div>
     );
   }
