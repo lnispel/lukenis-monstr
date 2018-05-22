@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header.js';
 import styled from 'styled-components';
 import AboutMeImage from '../content/about-me-image.png';
 
@@ -7,7 +6,6 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Header/>
         <AboutMe>
           My name is Luke Nispel and I am a creator. I have a background in both software development as well as art and graphic design. I was raised by an elctrical engineer as my father and a graphic desginer as my mother.
         </AboutMe>
@@ -28,4 +26,7 @@ const AboutMe = styled.div`
 const AboutImage = styled.img`
   width: 300px;
   height: auto;
+  z-index: 10;
+  margin-top: -110px;
+  position: relative;
 `

@@ -4,20 +4,27 @@ import Home from './components/Home.js';
 import Portfolio from './components/Portfolio.js';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
+import PageShell from './components/PageShell'
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Drilldown from 'react-router-drilldown'
+import { Router, Route} from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
+
+const history = createBrowserHistory()
 
 class App extends Component {
   render() {
     return (
       <AppHolder>
-        <Router>
-          <div>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about_me" component={About}/>
-            <Route path="/portfolio" component={Portfolio}/>
-            <Route path="/contact" component={Contact}/>
-          </div>
+        <Router
+        history={history}
+        >
+          <Drilldown>
+            <Route exact path="/" component={PageShell(Home)}/>
+            <Route path="/about_me" component={PageShell(About)}/>
+            <Route path="/portfolio" component={PageShell(Portfolio)}/>
+            <Route path="/contact" component={PageShell(Contact)}/>
+          </Drilldown>
         </Router>
       </AppHolder>
     );
