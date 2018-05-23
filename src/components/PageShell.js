@@ -25,7 +25,7 @@ const Hr1 = styled.hr`
     margin-top: 425px;
   }
   @media ${device.mobileL} {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 `
 const Hr2 = styled.hr`

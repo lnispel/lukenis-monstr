@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../content/lukenis-monstr-home-image.png';
+import logo from '../content/lukenis-monstr-home-image.svg';
 import styled from 'styled-components';
 import { device } from '../device';
 
