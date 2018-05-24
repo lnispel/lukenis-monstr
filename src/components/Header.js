@@ -1,31 +1,48 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { device } from '../device';
+import { withRouter } from "react-router-dom";
 
 class Header extends Component {
+  constructor (props) {
+      super(props)
+      this.state ={
+        selected: ""
+      }
+      this.changeSelected = this.changeSelected.bind(this);
+  }
+  componentDidMount() {
+    this.changeSelected(this.props.history.location.pathname.split('/')[1])
+  }
+
+  changeSelected(selected) {
+    this.setState({ selected: selected });
+    this.props.history.push(selected)
+  }
+
   render() {
     return (
         <HeaderContainer>
           <Circle className="circle-hover"/>
           <TopCircle className="top-circle-hover"/>
           <MainNav className="main-nav">
-            <LinkContainer className="link-container">
-              <HeaderLink className="header-link" to="/">
+            <LinkContainer onClick={() => this.changeSelected('')} selected={this.state.selected} pathName="" className="link-container">
+              <HeaderLink className="header-link home" to="/">
                 Home
               </HeaderLink>
             </LinkContainer>
-            <LinkContainer className="link-container">
+            <LinkContainer onClick={() => this.changeSelected('about_me')} selected={this.state.selected} pathName="about_me" className="link-container">
               <HeaderLink className="header-link" to="/about_me">
                 About Me
               </HeaderLink>
             </LinkContainer>
-            <LinkContainer className="link-container">
+            <LinkContainer onClick={() => this.changeSelected('portfolio')} selected={this.state.selected} pathName="portfolio" className="link-container">
               <HeaderLink className="header-link" to="/portfolio">
                 Portfolio
               </HeaderLink>
             </LinkContainer>
-            <LinkContainer className="link-container">
+            <LinkContainer onClick={() => this.changeSelected('contact')} selected={this.state.selected} pathName="contact" className="link-container">
               <HeaderLink className="header-link" to="/contact">
                 Contact
               </HeaderLink>
@@ -35,7 +52,7 @@ class Header extends Component {
     )
   }
 }
-export default Header;
+export default withRouter(Header);
 
 const MainNav = styled.ul`
     list-style-type: none;
@@ -45,7 +62,7 @@ const MainNav = styled.ul`
     padding-top: 8px;
 `
 
-const HeaderLink = styled(Link)`
+const HeaderLink = styled(NavLink)`
     text-decoration: none;
     width: fit-content;
     color: white;
@@ -56,7 +73,8 @@ const HeaderLink = styled(Link)`
 `
 
 const LinkContainer = styled.li `
-    border-bottom: 2px solid #1e0707;
+    border-bottom: ${props => props.selected == props.pathName ?
+      '2px solid #63ecf7' : '2px solid #1e0707'};
     height: 0;
     width: fit-content;
     margin: 3px 10px 3px 10px;
@@ -83,8 +101,11 @@ const HeaderContainer = styled.ul`
       }
 
       &:hover .header-link {
-        color: black
+        color: #441919;
+      }
 
+      &:hover .header-link.active:not(.home){
+        color: #63ecf7;
       }
 
       &:hover .link-container {
@@ -93,7 +114,7 @@ const HeaderContainer = styled.ul`
       }
     }
     @media ${device.tablet} {
-      circle-hover {
+      .circle-hover {
         margin-top: 16px;
       }
 
@@ -103,8 +124,11 @@ const HeaderContainer = styled.ul`
       }
 
       .header-link {
-        color: black
+        color: #441919;
+      }
 
+      .header-link.active:not(.home) {
+        color: #63ecf7;
       }
 
       .link-container {
@@ -130,7 +154,7 @@ const TopCircle = styled.div`
 `
 
 const Circle = styled.div`
-    background-color: #3a1111;
+    background-color: #441919;
     border-radius: 25px;
     width: 17px;
     height: 17px;

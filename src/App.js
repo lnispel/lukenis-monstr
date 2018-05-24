@@ -14,6 +14,8 @@ import createBrowserHistory from 'history/createBrowserHistory';
 const history = createBrowserHistory()
 
 class App extends Component {
+  onComponentDidMount() {
+  }
   render() {
     return (
       <AppHolder>
@@ -21,7 +23,7 @@ class App extends Component {
         history={history}
         >
           <div>
-            <Header/>
+            <Header page=""/>
             <Drilldown>
               <Route exact path="/" component={PageShell(Home)}/>
               <Route path="/about_me" component={PageShell(About)}/>
