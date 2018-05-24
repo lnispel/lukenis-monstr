@@ -108,6 +108,10 @@ const HeaderContainer = styled.ul`
         color: #63ecf7;
       }
 
+      &:hover .header-link.home {
+        color: #7a3636;
+      }
+
       &:hover .link-container {
         border-bottom: 2px solid #63ecf7;
         height: 20px;
@@ -129,6 +133,10 @@ const HeaderContainer = styled.ul`
 
       .header-link.active:not(.home) {
         color: #63ecf7;
+      }
+
+      .header-link.home {
+        color: #7a3636;
       }
 
       .link-container {
