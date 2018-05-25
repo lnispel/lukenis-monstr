@@ -46,6 +46,7 @@ const AboutMe = styled.div`
     padding: 10%;
     position: relative;
     z-index: 10;
+    line-height: 2;
 `
 
 const AboutImage = styled.img`
@@ -62,5 +63,6 @@ const AboutMeSub = styled.div`
     padding: 2% 10%;
     position: relative;
     z-index: 10;
+    line-height: 2;
 
 `

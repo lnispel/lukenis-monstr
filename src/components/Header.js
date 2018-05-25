@@ -75,10 +75,16 @@ const HeaderLink = styled(NavLink)`
 const LinkContainer = styled.li `
     border-bottom: ${props => props.selected == props.pathName ?
       '2px solid #63ecf7' : '2px solid #1e0707'};
-    height: 0;
+    height:  ${props => props.selected == props.pathName ?
+      '20px' : '0px'};
     width: fit-content;
     margin: 3px 10px 3px 10px;
     transition: all .2s ease-in-out;
+
+    .header-link.home {
+      color: ${props => props.selected == props.pathName ?
+        '#63ecf7': 'white'};
+    }
 `
 
 const HeaderContainer = styled.ul`
@@ -104,7 +110,7 @@ const HeaderContainer = styled.ul`
         color: #441919;
       }
 
-      &:hover .header-link.active:not(.home){
+      .header-link.active:not(.home){
         color: #63ecf7;
       }
 
@@ -119,11 +125,11 @@ const HeaderContainer = styled.ul`
     }
     @media ${device.tablet} {
       .circle-hover {
-        margin-top: 16px;
+        margin-top: 11px;
       }
 
       .top-circle-hover {
-        margin-top: 7px;
+        margin-top: 2px;
         background-color: white;
       }
 

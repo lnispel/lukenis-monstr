@@ -6,10 +6,28 @@ class Portfolio extends Component {
   render() {
     return (
       <div>
-        <AboutMe>
-          My name is Luke Nispel and I am a creator. I have a background in both software development as well as art and graphic design. I was raised by an elctrical engineer as my father and a graphic desginer as my mother.
-        </AboutMe>
-        <AboutImage src={AboutMeImage}/>
+        <ul>
+          <li>
+            <a href="https://discover-family-history.herokuapp.com/">Discover Family History</a>
+
+            <div>Discover Family History is a geneology business ran by Gail Shaffer Blankenuea.</div>
+          </li>
+
+          <li>
+            <a href="https://the-other-77000-app.herokuapp.com/">The Other 77,000</a>
+              <div>The Other 77,000 was a project I designed for myself to document the rural decay in Nebraksa and other parts of the rural midwest
+
+              Associated accounts:
+              <a href='https://www.facebook.com/theother77000/'>Facebook</a>
+              <a href='https://github.com/lnispel/TheOther77000'>Github</a>
+              <a href=''></a>
+              </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/lnispel/Meemo">Meemo</a>
+          </li>
+        </ul>
       </div>
     );
   }

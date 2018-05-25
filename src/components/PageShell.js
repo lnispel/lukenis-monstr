@@ -22,10 +22,7 @@ const Hr1 = styled.hr`
   margin-top: 300px;
 
   @media ${device.tablet} {
-    margin-top: 425px;
-  }
-  @media ${device.mobileL} {
-    margin-top: 250px;
+    display: none;
   }
 `
 const Hr2 = styled.hr`
@@ -33,11 +30,9 @@ const Hr2 = styled.hr`
   position: relative;
   z-index: 1;
   margin-bottom: -230px;
-  @media ${device.mobileM} {
-    margin-bottom: -175px;
-  }
-  @media ${device.mobileL} {
-    margin-top: 15px;
+
+  @media ${device.tablet} {
+    display: none;
   }
 `
 const Hr3 = styled.hr`
@@ -45,14 +40,9 @@ const Hr3 = styled.hr`
   position: relative;
   z-index: 1;
   margin-top: -150px;
-  margin-bottom: 150px;
+  margin-bottom: 250px;
 
-  @media ${device.mobileM} {
-    margin-top: -115px;
-    margin-bottom: 115px;
-  }
-  @media ${device.mobileL} {
-    margin-top: -125px;
-    margin-bottom: 125px;
+  @media ${device.tablet} {
+      display: none;
   }
 `
