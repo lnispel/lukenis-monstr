@@ -16,7 +16,7 @@ class About extends Component {
         </AboutMeSub>
 
         <AboutMeSub>
-          I continued on with my education through Colorado State University - Global Campus' IT Program as well as attending a code school named Sabio in Los Angeles. Since then, I have been able to build my own projects on the side as well as work as a full-time softeware engineer at Big Brand Tire & Service in Camarillo, CA building out various in house applications, revamping their websit while working in many different coding environments such as TFS, Visual Studios, C#, ASP.Net, CSS, HTML, React and Node.
+          I continued on with my education through Colorado State University - Global Campus' IT Program as well as attending the code school Sabio in Los Angeles. Since then, I have been able to build my own projects on the side and as a full-time softeware engineer at Big Brand Tire & Service in Camarillo, CA building out various in house applications, revamping their website while working in many different coding environments such as TFS, Visual Studios, C#, ASP.Net, CSS, HTML, React and Node.
         </AboutMeSub>
 
         <AboutImage src={AboutMeImage}/>
@@ -28,9 +28,9 @@ class About extends Component {
 export default About;
 
 const AboutTitle = styled.h3`
-  margin-left: -35%;
   margin-top: -10%;
   color: #441919;
+  text-align: left;
 
   @media ${device.tablet} {
     width: 100%;
@@ -41,7 +41,8 @@ const AboutTitle = styled.h3`
 `
 
 const AboutMe = styled.div`
-    color: #1e0707;
+    text-align: left;
+    color: white;
     width: 80%;
     padding: 10%;
     position: relative;
@@ -58,11 +59,11 @@ const AboutImage = styled.img`
 `
 
 const AboutMeSub = styled.div`
-    color: #1e0707;
+    color: white;
     width: 80%;
     padding: 2% 10%;
     position: relative;
     z-index: 10;
     line-height: 2;
-
+    text-align: left;
 `

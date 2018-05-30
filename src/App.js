@@ -41,7 +41,7 @@ export default App;
 
 const AppHolder = styled.div `
   text-align: center;
-  background: linear-gradient(white, #f4eded);
+  background: linear-gradient(white, #1592e6, #351111);
   min-height: 100%;
   height: fit-content;
 `

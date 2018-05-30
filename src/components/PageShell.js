@@ -16,7 +16,7 @@ export default PageShell;
 
 
 const Hr1 = styled.hr`
-  border: 1px solid #63ecf7;
+  border: 1px solid #ffff97;
   position: relative;
   z-index: 1;
   margin-top: 300px;
@@ -26,7 +26,7 @@ const Hr1 = styled.hr`
   }
 `
 const Hr2 = styled.hr`
-  border: 4px solid #63ecf7;
+  border: 4px solid #ffff97;
   position: relative;
   z-index: 1;
   margin-bottom: -230px;
@@ -36,7 +36,7 @@ const Hr2 = styled.hr`
   }
 `
 const Hr3 = styled.hr`
-  border: 1px solid #63ecf7;
+  border: 1px solid #ffff97;
   position: relative;
   z-index: 1;
   margin-top: -150px;
