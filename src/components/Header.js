@@ -76,8 +76,9 @@ const HeaderLink = styled(NavLink)`
 `
 
 const LinkContainer = styled.li `
+    font-weight: bold;
     border-bottom: ${props => props.selected == props.pathName ?
-      '2px solid #1e0707' : '2px solid #1592e6'};
+      '2px solid #1e0707' : '2px solid #25679e'};
     height:  ${props => props.selected == props.pathName ?
       '20px' : '0px'};
     box-shadow:  ${props => props.selected == props.pathName ?
@@ -109,6 +110,7 @@ const HeaderContainer = styled.ul`
     @media ${device.laptop} {
       &:hover .circle-hover {
         margin-top: 16px;
+        background-color: #25679e;
       }
 
       &:hover .top-circle-hover {
@@ -117,16 +119,16 @@ const HeaderContainer = styled.ul`
       }
 
       &:hover .header-link {
-        color: #1592e6;
+        color: #441919;
         opacity: 1;
       }
 
       .header-link.active:not(.home){
-        color: #441919;
+        color: #25679e;
       }
 
       &:hover .header-link.home {
-        color: #1592e6;
+        color: #25679e;
       }
 
       &:hover .link-container {
@@ -146,14 +148,15 @@ const HeaderContainer = styled.ul`
 
       .header-link {
         color: #441919;
+        opacity: 1;
       }
 
       .header-link.active:not(.home) {
-        color: #efb4b4;
+        color: #441919;
       }
 
       .header-link.home {
-        color: #1592e6;
+        color: #25679e;
       }
 
       .link-container {
@@ -172,10 +175,11 @@ const CircleHolder = styled.div`
     justify-content:center;
     width: 25px;
     align-items: center;
+    transition: all .2s ease-in-out;
 `
 
 const TopCircle = styled.div`
-    background-color: #transpa;
+    background-color: transparent;
     border-radius: 25px;
     border: 2px solid #ffff97;
     width: 10px;
@@ -186,7 +190,7 @@ const TopCircle = styled.div`
 `
 
 const Circle = styled.div`
-    background-color: #351111;
+    background-color: #441919;
     border-radius: 25px;
     width: 18px;
     height: 18px;
