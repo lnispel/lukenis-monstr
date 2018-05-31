@@ -22,6 +22,6 @@ const Logo = styled.img`
   @media ${device.mobileL} {
     width: 90%;
     height: auto;
-    margin-top: 25vw;
+    margin-top: 12vw;
   }
 `
