@@ -78,7 +78,7 @@ const HeaderLink = styled(NavLink)`
 const LinkContainer = styled.li `
     font-weight: bold;
     border-bottom: ${props => props.selected == props.pathName ?
-      '2px solid #1e0707' : '2px solid #25679e'};
+      '2px solid #25679e' : '2px solid #25679e'};
     height:  ${props => props.selected == props.pathName ?
       '20px' : '0px'};
     box-shadow:  ${props => props.selected == props.pathName ?
@@ -128,7 +128,7 @@ const HeaderContainer = styled.ul`
       }
 
       &:hover .header-link.home {
-        color: #25679e;
+        color: #441919;
       }
 
       &:hover .link-container {
@@ -156,7 +156,7 @@ const HeaderContainer = styled.ul`
       }
 
       .header-link.home {
-        color: #25679e;
+        color: #33cc71;
       }
 
       .link-container {

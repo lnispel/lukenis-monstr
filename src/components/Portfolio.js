@@ -9,21 +9,6 @@ class Portfolio extends Component {
   render() {
     return (
       <PortfolioWrapper>
-          <PortfolioLink><a className="portfolio-item-title first" href="https://discover-family-history.herokuapp.com/">Discover Family History</a></PortfolioLink>
-          <PortfolioItem className="portfolio-item">
-            <div>
-              <PortfolioText>Discover Family History is a geneology business owned by Gail Shaffer Blankenau. Mrs. Shaffer Blankenau came to me asking for a website upgrade from one she built back in the early 2000's and gave me full creative freedom to design and build it how I saw fit.</PortfolioText>
-              <PortfolioText>The website was constructed using Ruby On Rails, Heroku, Git, Css, and Html</PortfolioText>
-
-              <PortfolioLink><a href="https://bitbucket.org/lnispel/discover-family-history/src">BitBucket</a></PortfolioLink>
-            </div>
-            <div>
-              <PortfolioImageHolder className="portfolio-item-holder">
-                <PortfolioImage src={DiscoverFamilyImg}/>
-              </PortfolioImageHolder>
-            </div>
-          </PortfolioItem>
-
           <PortfolioLink> <a className="portfolio-item-title second" href="https://the-other-77000-app.herokuapp.com/">The Other 77,000</a></PortfolioLink>
           <PortfolioItem placement="right" className="portfolio-item">
             <div>
@@ -41,6 +26,21 @@ class Portfolio extends Component {
             <div>
               <PortfolioImageHolder className="portfolio-item-holder">
                 <PortfolioImage src={Other77000Img}/>
+              </PortfolioImageHolder>
+            </div>
+          </PortfolioItem>
+
+          <PortfolioLink><a className="portfolio-item-title first" href="https://discover-family-history.herokuapp.com/">Discover Family History</a></PortfolioLink>
+          <PortfolioItem className="portfolio-item">
+            <div>
+              <PortfolioText>Discover Family History is a geneology business owned by Gail Shaffer Blankenau. Mrs. Shaffer Blankenau came to me asking for a website upgrade from one she built back in the early 2000's and gave me full creative freedom to design and build it how I saw fit.</PortfolioText>
+              <PortfolioText>The website was constructed using Ruby On Rails, Heroku, Git, Css, and Html</PortfolioText>
+
+              <PortfolioLink><a href="https://bitbucket.org/lnispel/discover-family-history/src">BitBucket</a></PortfolioLink>
+            </div>
+            <div>
+              <PortfolioImageHolder className="portfolio-item-holder">
+                <PortfolioImage src={DiscoverFamilyImg}/>
               </PortfolioImageHolder>
             </div>
           </PortfolioItem>
