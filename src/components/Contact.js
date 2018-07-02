@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import AboutMeImage from '../content/about-me-image.png';
+import { device } from '../device';
 
 class Contact extends Component {
   render() {
@@ -29,6 +30,11 @@ const AboutMe = styled.div`
       background-color: white;
       color: #25679e;
       box-shadow: 0px 0px 12px 2px #ffff97;
+    }
+
+    @media ${device.tablet} {
+      display: flex;
+      flex-direction: column;
     }
 `
 

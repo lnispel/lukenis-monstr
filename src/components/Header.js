@@ -156,7 +156,7 @@ const HeaderContainer = styled.ul`
       }
 
       .header-link.home {
-        color: #33cc71;
+        color: #25679e;
       }
 
       .link-container {

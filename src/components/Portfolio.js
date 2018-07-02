@@ -92,6 +92,7 @@ const PortfolioItem = styled.a`
     @media ${device.mobileL} {
       width: unset;
       flex-direction: column;
+      padding: 20px 39px 42px 30px;
 
       .portfolio-item-holder {
         top: 0;
